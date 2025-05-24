@@ -3,6 +3,7 @@ import 'ex1.dart';
 import 'ex2.dart';
 import 'ex3.dart';
 import 'ex4.dart';
+import 'ex5.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,16 +40,14 @@ class ExerciciosHome extends StatelessWidget {
           children: [
             _ExercicioButton(
               title: 'Lista de Compras',
-              image:
-                  'https://cdn-icons-png.flaticon.com/512/1011/1011286.png',
+              image: 'https://cdn-icons-png.flaticon.com/512/1011/1011286.png',
               onTap:
                   () => Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => const ListaCompras(
-                            title: 'Lista de Compras',
-                          ),
+                          (context) =>
+                              const ListaCompras(title: 'Lista de Compras'),
                     ),
                   ),
             ),
@@ -60,9 +59,8 @@ class ExerciciosHome extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => const TarefasDiarias(
-                            title: 'Tarefas Diárias',
-                          ),
+                          (context) =>
+                              const TarefasDiarias(title: 'Tarefas Diárias'),
                     ),
                   ),
             ),
@@ -74,9 +72,8 @@ class ExerciciosHome extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => const NotasRapidas(
-                            title: 'Notas Rápidas',
-                          ),
+                          (context) =>
+                              const NotasRapidas(title: 'Notas Rápidas'),
                     ),
                   ),
             ),
@@ -88,12 +85,22 @@ class ExerciciosHome extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => const FormularioFeedback(
-                            title: 'Feedback',
-                          ),
+                          (context) =>
+                              const FormularioFeedback(title: 'Feedback'),
                     ),
                   ),
-            )
+            ),
+            _ExercicioButton(
+              title: 'Preferências',
+              image: 'https://cdn-icons-png.flaticon.com/512/4561/4561705.png',
+              onTap:
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ConfiguracoesPreferencia(),
+                    ),
+                  ),
+            ),
           ],
         ),
       ),
