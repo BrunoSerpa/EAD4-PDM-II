@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ex1.dart';
 import 'ex2.dart';
+import 'ex3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,6 +61,20 @@ class ExerciciosHome extends StatelessWidget {
                       builder:
                           (context) => const TarefasDiarias(
                             title: 'Tarefas Diárias',
+                          ),
+                    ),
+                  ),
+            ),
+            _ExercicioButton(
+              title: 'Notas Rápidas',
+              image: 'https://cdn-icons-png.flaticon.com/512/82/82071.png',
+              onTap:
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder:
+                          (context) => const NotasRapidas(
+                            title: 'Notas Rápidas',
                           ),
                     ),
                   ),
